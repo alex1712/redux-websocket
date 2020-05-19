@@ -97,7 +97,6 @@ describe('ReduxWebSocket', () => {
         meta: {
           timestamp: expect.any(Date),
         },
-        payload: 'test event',
       });
     });
 
@@ -136,7 +135,6 @@ describe('ReduxWebSocket', () => {
           timestamp: expect.any(Date),
         },
         payload: {
-          event: testEvent,
           message: data,
           origin: 'test origin',
         },
@@ -253,7 +251,6 @@ describe('ReduxWebSocket', () => {
           meta: {
             timestamp: expect.any(Date),
           },
-          payload: 'test event',
         });
         /* eslint-enable dot-notation */
       });

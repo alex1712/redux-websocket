@@ -94,15 +94,14 @@ export const reconnectAttempt = (count: number, prefix: string) =>
   buildAction(`${prefix}::${WEBSOCKET_RECONNECT_ATTEMPT}`, { count });
 export const reconnected = (prefix: string) =>
   buildAction(`${prefix}::${WEBSOCKET_RECONNECTED}`);
-export const open = (event: Event, prefix: string) =>
-  buildAction(`${prefix}::${WEBSOCKET_OPEN}`, event);
+export const open = (_event: Event, prefix: string) =>
+  buildAction(`${prefix}::${WEBSOCKET_OPEN}`);
 export const broken = (prefix: string) =>
   buildAction(`${prefix}::${WEBSOCKET_BROKEN}`);
-export const closed = (event: Event, prefix: string) =>
-  buildAction(`${prefix}::${WEBSOCKET_CLOSED}`, event);
+export const closed = (_event: Event, prefix: string) =>
+  buildAction(`${prefix}::${WEBSOCKET_CLOSED}`);
 export const message = (event: MessageEvent, prefix: string) =>
   buildAction(`${prefix}::${WEBSOCKET_MESSAGE}`, {
-    event,
     message: event.data,
     origin: event.origin,
   });

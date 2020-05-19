@@ -163,7 +163,6 @@ describe('actions', () => {
         expect(act).toEqual({
           type: `${PREFIX}::${actionTypes.WEBSOCKET_CLOSED}`,
           meta: { timestamp: expect.any(Date) },
-          payload: event,
         });
       });
     });
@@ -178,7 +177,6 @@ describe('actions', () => {
           type: `${PREFIX}::${actionTypes.WEBSOCKET_MESSAGE}`,
           meta: { timestamp: expect.any(Date) },
           payload: {
-            event,
             message: null,
             origin: event.origin,
           },
@@ -195,7 +193,6 @@ describe('actions', () => {
         expect(act).toEqual({
           type: `${PREFIX}::${actionTypes.WEBSOCKET_OPEN}`,
           meta: { timestamp: expect.any(Date) },
-          payload: event,
         });
       });
     });
